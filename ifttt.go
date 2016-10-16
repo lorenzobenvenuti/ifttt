@@ -10,6 +10,7 @@ import (
 const iftttUrlTemplate string = "https://maker.ifttt.com/trigger/%s/with/key/%s"
 
 type IftttClient interface {
+	// Triggers an event with the specified parameters
 	Trigger(event string, values []string)
 }
 
@@ -34,6 +35,7 @@ func (ifttt *iftttClientImpl) Trigger(event string, values []string) {
 	}
 }
 
+// Creates a new IftttClient object with the given API key
 func NewIftttClient(key string) IftttClient {
 	return &iftttClientImpl{key}
 }
