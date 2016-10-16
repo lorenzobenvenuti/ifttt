@@ -3,7 +3,7 @@ A golang library to trigger IFTTT events.
 
 Usage:
 
-```g
+```go
 
 import "ifttt"
 
